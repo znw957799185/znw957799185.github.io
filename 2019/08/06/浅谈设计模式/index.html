@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
 
-  
-  <title>浅谈设计模式之GoF的23种设计模式 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post.">
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="John Doe">
+
+
+
+<meta name="description" content="Welcome to Hexo! This is your very first post.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈设计模式之GoF的23种设计模式">
 <meta property="og:url" content="http://yoursite.com/2019/08/06/浅谈设计模式/index.html">
@@ -18,64 +26,250 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈设计模式之GoF的23种设计模式">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post.">
-  
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>浅谈设计模式之GoF的23种设计模式 | Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
 <body>
   <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">John Doe</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/957799185@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/znw957799185" title="GitHub"></a>
+                            
+                                <a class="fa 新浪微博" href="/@我就是不告诉你们我叫啥" title="新浪微博"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">主页</a>
-        
-          <a class="main-nav-link" href="/archives/">所有文章</a>
-        
-          <a class="main-nav-link" href="/tags/">标签云</a>
-        
-          <a class="main-nav-link" href="/about/">关于我</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">John Doe</a></h1>
       </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/957799185@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/znw957799185" title="GitHub"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="/@我就是不告诉你们我叫啥" title="新浪微博"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-浅谈设计模式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/06/浅谈设计模式/" class="article-date">
-  <time datetime="2019-08-06T06:18:45.000Z" itemprop="datePublished">2019-08-06</time>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-浅谈设计模式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/08/06/浅谈设计模式/" class="article-date">
+      <time datetime="2019-08-06T06:18:45.000Z" itemprop="datePublished">2019-08-06</time>
 </a>
-    
-  </div>
+
+
+    </div>
+  
   <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
       <header class="article-header">
@@ -87,9 +281,18 @@
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
+          
         <h2 id="GoF的23种设计模式的功能"><a href="#GoF的23种设计模式的功能" class="headerlink" title="GoF的23种设计模式的功能"></a>GoF的23种设计模式的功能</h2><p> 必须指出，这 23 种设计模式不是孤立存在的，很多模式之间存在一定的关联关系，在大的系统开发中常常同时使用多种设计模式。</p>
 <p>设计模式有两种分类方法，即根据模式的目的来分和根据模式的作用的范围来分.</p>
 <h2 id="根据目的来分"><a href="#根据目的来分" class="headerlink" title="根据目的来分"></a>根据目的来分</h2><h3 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h3><p>用于描述“怎样创建对象”，它的主要特点是“将对象的创建与使用分离”。<br>GoF 中提供了单例、原型、工厂方法、抽象工厂、建造者等 5 种创建型模式。</p>
@@ -245,105 +448,206 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/06/浅谈设计模式/" data-id="cjyza4v360001xwvkffv2fx9y" class="article-share-link">Share</a>
-      
-      
-    </footer>
+    
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2019/07/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/08/06/浅谈设计模式/">浅谈设计模式之GoF的23种设计模式</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">John Doe</a></p>
+        <p><span>发布时间:</span>2019-08-06, 14:18:45</p>
+        <p><span>最后更新:</span>2019-08-06, 11:33:37</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/06/浅谈设计模式/" title="浅谈设计模式之GoF的23种设计模式">http://yoursite.com/2019/08/06/浅谈设计模式/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/06/浅谈设计模式/　　作者: John Doe" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/07/26/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
 
-</section>
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GoF的23种设计模式的功能"><span class="toc-number">1.</span> <span class="toc-text">GoF的23种设计模式的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#根据目的来分"><span class="toc-number">2.</span> <span class="toc-text">根据目的来分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建型模式"><span class="toc-number">2.1.</span> <span class="toc-text">创建型模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构型模式"><span class="toc-number">2.2.</span> <span class="toc-text">结构型模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行为型模式"><span class="toc-number">2.3.</span> <span class="toc-text">行为型模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#根据作用范围来分"><span class="toc-number">3.</span> <span class="toc-text">根据作用范围来分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#类模式"><span class="toc-number">3.1.</span> <span class="toc-text">类模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象模式"><span class="toc-number">3.2.</span> <span class="toc-text">对象模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#以下是按定义描述23种设计模式"><span class="toc-number">4.</span> <span class="toc-text">以下是按定义描述23种设计模式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件设计遵循原则"><span class="toc-number"></span> <span class="toc-text">软件设计遵循原则</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#开闭原则："><span class="toc-number">1.</span> <span class="toc-text">开闭原则：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#里氏替换原则："><span class="toc-number">2.</span> <span class="toc-text">里氏替换原则：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖倒置原则："><span class="toc-number">3.</span> <span class="toc-text">依赖倒置原则：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单一职责原则"><span class="toc-number">4.</span> <span class="toc-text">单一职责原则:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口隔离原则"><span class="toc-number">5.</span> <span class="toc-text">接口隔离原则:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#迪米特法则："><span class="toc-number">6.</span> <span class="toc-text">迪米特法则：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合成复用原则"><span class="toc-number">7.</span> <span class="toc-text">合成复用原则:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建型模式的主要关注点是“怎样创建对象？”，它的主要特点是“将对象的创建与使用分离”。这样可以降低系统的耦合度，使用者不需要关注对象的创建细节，对象的创建由相关的工厂来完成。就像我们去商场购买商品时，不需要知道商品是怎么生产出来一样，因为它们由专门的厂商生产。"><span class="toc-number">8.</span> <span class="toc-text">创建型模式的主要关注点是“怎样创建对象？”，它的主要特点是“将对象的创建与使用分离”。这样可以降低系统的耦合度，使用者不需要关注对象的创建细节，对象的创建由相关的工厂来完成。就像我们去商场购买商品时，不需要知道商品是怎么生产出来一样，因为它们由专门的厂商生产。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、单例（Singleton）模式"><span class="toc-number">8.1.</span> <span class="toc-text">1、单例（Singleton）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、原型（Prototype）模式"><span class="toc-number">8.2.</span> <span class="toc-text">2、原型（Prototype）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、工厂方法（FactoryMethod"><span class="toc-number">8.3.</span> <span class="toc-text">3、工厂方法（FactoryMethod)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、抽象工厂（AbstractFactory）"><span class="toc-number">8.4.</span> <span class="toc-text">4、抽象工厂（AbstractFactory）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、建造者（Builder）模式"><span class="toc-number">8.5.</span> <span class="toc-text">5、建造者（Builder）模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构型模式描述如何将类或对象按某种布局组成更大的结构。它分为类结构型模式和对象结构型模式，前者采用继承机制来组织接口和类，后者釆用组合或聚合来组合对象。由于组合关系或聚合关系比继承关系耦合度低，满足“合成复用原则”，所以对象结构型模式比类结构型模式具有更大的灵活性。"><span class="toc-number">9.</span> <span class="toc-text">结构型模式描述如何将类或对象按某种布局组成更大的结构。它分为类结构型模式和对象结构型模式，前者采用继承机制来组织接口和类，后者釆用组合或聚合来组合对象。由于组合关系或聚合关系比继承关系耦合度低，满足“合成复用原则”，所以对象结构型模式比类结构型模式具有更大的灵活性。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#06、代理（Proxy）模式"><span class="toc-number">9.1.</span> <span class="toc-text">06、代理（Proxy）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07、适配器（Adapter）模式"><span class="toc-number">9.2.</span> <span class="toc-text">07、适配器（Adapter）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#08、桥接（Bridge）模式"><span class="toc-number">9.3.</span> <span class="toc-text">08、桥接（Bridge）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#09、装饰（Decorator）模式"><span class="toc-number">9.4.</span> <span class="toc-text">09、装饰（Decorator）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10、外观（Facade）模式"><span class="toc-number">9.5.</span> <span class="toc-text">10、外观（Facade）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11、享元（Flyweight）模式"><span class="toc-number">9.6.</span> <span class="toc-text">11、享元（Flyweight）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12、组合（Composite）模式"><span class="toc-number">9.7.</span> <span class="toc-text">12、组合（Composite）模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行为型模式用于描述程序在运行时复杂的流程控制，即描述多个类或对象之间怎样相互协作共同完成单个对象都无法单独完成的任务，它涉及算法与对象间职责的分配。行为型模式分为类行为模式和对象行为模式，前者采用继承机制来在类间分派行为，后者采用组合或聚合在对象间分配行为。由于组合关系或聚合关系比继承关系耦合度低，满足“合成复用原则”，所以对象行为模式比类行为模式具有更大的灵活性。"><span class="toc-number">10.</span> <span class="toc-text">行为型模式用于描述程序在运行时复杂的流程控制，即描述多个类或对象之间怎样相互协作共同完成单个对象都无法单独完成的任务，它涉及算法与对象间职责的分配。行为型模式分为类行为模式和对象行为模式，前者采用继承机制来在类间分派行为，后者采用组合或聚合在对象间分配行为。由于组合关系或聚合关系比继承关系耦合度低，满足“合成复用原则”，所以对象行为模式比类行为模式具有更大的灵活性。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13、模板方法（Template-Method）模式"><span class="toc-number">10.1.</span> <span class="toc-text">13、模板方法（Template Method）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14、策略（Strategy）模式"><span class="toc-number">10.2.</span> <span class="toc-text">14、策略（Strategy）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15、命令（Command）模式"><span class="toc-number">10.3.</span> <span class="toc-text">15、命令（Command）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16、责任链（Chain-of-Responsibility）模式"><span class="toc-number">10.4.</span> <span class="toc-text">16、责任链（Chain of Responsibility）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17、状态（State）模式"><span class="toc-number">10.5.</span> <span class="toc-text">17、状态（State）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18、观察者（Observer）模式"><span class="toc-number">10.6.</span> <span class="toc-text">18、观察者（Observer）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19、中介者（Mediator）模式"><span class="toc-number">10.7.</span> <span class="toc-text">19、中介者（Mediator）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20、迭代器（Iterator）模式"><span class="toc-number">10.8.</span> <span class="toc-text">20、迭代器（Iterator）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21、访问者（Visitor）模式"><span class="toc-number">10.9.</span> <span class="toc-text">21、访问者（Visitor）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22、备忘录（Memento）模式"><span class="toc-number">10.10.</span> <span class="toc-text">22、备忘录（Memento）模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23、解释器（Interpreter）模式"><span class="toc-number">10.11.</span> <span class="toc-text">23、解释器（Interpreter）模式</span></a></li></ol></li></ol>
+        
     </div>
-  </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
-  
+
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/08/06/浅谈设计模式/">浅谈设计模式之GoF的23种设计模式</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/26/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"浅谈设计模式之GoF的23种设计模式　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-  
-</aside>
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-      </div>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/07/26/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/06/浅谈设计模式/">浅谈设计模式之GoF的23种设计模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/26/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
       <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2019 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
-  </div>
 </footer>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">主页</a>
-  
-    <a href="/archives/" class="mobile-nav-link">所有文章</a>
-  
-    <a href="/tags/" class="mobile-nav-link">标签云</a>
-  
-    <a href="/about/" class="mobile-nav-link">关于我</a>
-  
-</nav>
     
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
   </div>
 </body>
 </html>
